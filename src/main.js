@@ -3,6 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import{UserInput} from "./largest-prime-factor";
+import pig from "./img/pig.jpg";
 
 $().ready(function(){
   $(".largest-prime").submit(function(e){
@@ -11,6 +12,6 @@ $().ready(function(){
     let input = new UserInput(number);
     let output = input.getLargestPrime();
 
-    $(".output").html(output);
+    $(".output").html(`<img src=${pig}/>${output}`);
   })
 })
