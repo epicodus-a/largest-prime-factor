@@ -8,8 +8,18 @@ describe("factor", function(){
 });
 
 describe("UserInput", function(){
+  let reusableUserInput;
+
+  beforeEach(function() {
+    reusableUserInput = new UserInput(26);
+  });
+
   it("should store a number as a property when constructed", function(){
-    let newUserInput = new UserInput(4);
-    expect(newUserInput.number).toEqual(4);
+    expect(reusableUserInput.number).toEqual(26);
+  });
+
+  it("should store an array of factors when getFactors is called upon the UserInput instance", function(){
+    reusableUserInput.getFactors();
+    expect(reusableUserInput.factors instanceof Array).toBeTruthy();
   });
 });

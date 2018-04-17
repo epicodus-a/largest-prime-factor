@@ -9,14 +9,14 @@ export class UserInput{
     this.factors = [];
   }
 
-  // getFactors (){
-  //   for (let i=1; i<=Math.sqrt(this.number); i++){
-  //     if (this.number % i === 0){
-  //       this.factors.push(i);
-  //     }
-  //   }
-  // }
-  //
+  getFactors (){
+    for (let i=1; i<=Math.sqrt(this.number); i++){
+      if (this.number % i === 0){
+        this.factors.push(i);
+      }
+    }
+  }
+
   // isPrime (possPrime) {
   //   for (let j=2; j<=Math.sqrt(possPrime); j++){
   //     if (j !== possPrime && possPrime%j === 0){
